@@ -30,12 +30,13 @@ font-family: 'Lexend Deca', sans-serif; */
     width: 69rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 15.63rem auto;   
+    margin: 15.63rem auto;    
 }
 
 #container-information{
     background-color: var(--color-p2);
     padding: 2.5rem;
+    border-radius: 10px 0 0 10px
 }
 
 #container-information h1{
@@ -59,13 +60,15 @@ font-family: 'Lexend Deca', sans-serif; */
 }
 
 #container-photo{
-    background-image: url('./img/image-header-desktop.jpg');
+    background-image: url('./img/image-header-desktop.jpg');     
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;  
     display: block;
     height: 27.8rem;
+    border-radius: 0 10px 10px 0;    
 }
+
 
 #container-statistics{
     display: flex;
@@ -88,4 +91,10 @@ font-family: 'Lexend Deca', sans-serif; */
     font-size: .7rem;    
     margin-top: 0.40rem;
     letter-spacing: .08em;
+}
+
+#opacity{
+    width: 100%;
+    color: var(--color-p3);
+    z-index: 5;
 }
