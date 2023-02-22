@@ -66,7 +66,8 @@ font-family: 'Lexend Deca', sans-serif; */
     background-position: center;  
     display: block;
     height: 27.8rem;
-    border-radius: 0 10px 10px 0;    
+    border-radius: 0 10px 10px 0;
+    filter: brightness(60%)    
 }
 
 
@@ -93,8 +94,21 @@ font-family: 'Lexend Deca', sans-serif; */
     letter-spacing: .08em;
 }
 
-#opacity{
-    width: 100%;
-    color: var(--color-p3);
-    z-index: 5;
+#container-photo div{
+    height: 27.8rem;
+    background-color: var(--color-p3);
+    opacity: .4;
+    filter: saturate(10);
+    
+}
+
+@media (max-width: 400px){
+    #container { 
+        grid-template-columns: 1fr ;        
+}
+    #container-photo {
+        background-image: url('/img/image-header-mobile.jpg');
+        grid-area: 1;
+    }
+
 }
