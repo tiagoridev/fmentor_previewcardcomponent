@@ -1,10 +1,10 @@
 /*All styles*/
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: 0px;
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;    
 }
 
 :root{
@@ -27,7 +27,7 @@ font-family: 'Lexend Deca', sans-serif; */
 /*************/
 
 #container{
-    width: 69rem;
+    max-width: 69rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 15.63rem auto;    
@@ -36,7 +36,8 @@ font-family: 'Lexend Deca', sans-serif; */
 #container-information{
     background-color: var(--color-p2);
     padding: 2.5rem;
-    border-radius: 10px 0 0 10px
+    border-radius: 10px 0 0 10px;
+    max-width: 69rem;
 }
 
 #container-information h1{
@@ -54,16 +55,16 @@ font-family: 'Lexend Deca', sans-serif; */
     margin-bottom: 5rem;
     font-size: 1rem;
     font-family: 'Lexend Deca', sans-serif;
-    max-width: 45ch;
+    /* max-width: 45ch; */
     color: var(--color-n3);
     letter-spacing: .02em;
 }
 
 #container-photo{
-    background-image: url('./img/image-header-desktop.jpg');     
-    background-repeat: no-repeat;
+    background-image: url('./img/image-header-desktop.jpg');    
     background-size: cover;
-    background-position: center;  
+    background-position: center;
+    background-repeat: no-repeat;
     display: block;
     height: 27.8rem;
     border-radius: 0 10px 10px 0;
@@ -102,13 +103,65 @@ font-family: 'Lexend Deca', sans-serif; */
     
 }
 
-@media (max-width: 400px){
-    #container { 
+
+@media (max-width: 700px){
+    #container-information h1{
+        font-size: 2.0rem;
+        width: 14ch;
+    }
+
+    #container {         
         grid-template-columns: 1fr ;        
+    }
+   
 }
+
+@media (max-width: 400px){
+    body{
+        overflow-x: hidden;       
+    }
+
+    #container { 
+        max-width: 20.31rem;        
+        grid-template-columns: 1fr ;
+        padding: 10px 0px ;
+        margin: 2rem auto;        
+    }
+
+    #container-information {
+        border-radius: 0px 0px 10px 10px;
+        text-align: center;
+        max-width: 20.31rem;
+    }
+
+    #container-information h1{
+        font-size: 2.0rem;
+        width: 14ch;
+        
+    }
+    
+    #container-information p{
+        font-size: 1rem;
+        margin-bottom: 3.12rem;
+        line-height: 1.4rem;
+    }
+    
+
+    #container-statistics{
+        flex-direction: column;
+        gap: 2.20rem;
+    }
+
     #container-photo {
-        background-image: url('/img/image-header-mobile.jpg');
+        background-image: url('./img/image-header-mobile.jpg');
+        height: 15rem;
         grid-area: 1;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    #container-photo div{
+        height: 15rem;
+        border-radius: 10px 10px 0px 0px;
     }
 
 }
