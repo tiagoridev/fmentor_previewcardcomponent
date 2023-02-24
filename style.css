@@ -1,5 +1,4 @@
-/*All styles*/
-
+/*General Styles*/
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +20,6 @@ body{
     background-color: var(--color-p1);
 }
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif; */
-
 /*************/
 
 #container{
@@ -36,7 +32,7 @@ font-family: 'Lexend Deca', sans-serif; */
 #container-information{
     background-color: var(--color-p2);
     padding: 2.5rem;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 0;
     max-width: 69rem;
 }
 
@@ -54,8 +50,7 @@ font-family: 'Lexend Deca', sans-serif; */
 #container-information p{
     margin-bottom: 5rem;
     font-size: 1rem;
-    font-family: 'Lexend Deca', sans-serif;
-    /* max-width: 45ch; */
+    font-family: 'Lexend Deca', sans-serif;    
     color: var(--color-n3);
     letter-spacing: .02em;
 }
@@ -67,16 +62,18 @@ font-family: 'Lexend Deca', sans-serif; */
     background-repeat: no-repeat;
     display: block;
     height: 27.8rem;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 0px 0;
     filter: brightness(60%)    
 }
 
+#opacity{
+    border-radius: 0 10px 0px 0;
+}
 
 #container-statistics{
     display: flex;
     justify-content: space-between;
-    max-width: 25rem;
-    
+    max-width: 25rem;    
 }
 
 .statistics-item{
@@ -99,33 +96,53 @@ font-family: 'Lexend Deca', sans-serif; */
     height: 27.8rem;
     background-color: var(--color-p3);
     opacity: .4;
-    filter: saturate(10);
-    
+    filter: saturate(10);    
 }
 
+/*table responsive*/
+@media (max-width: 1000px){
+    #container-information {
+        border-radius: 10px 0px 0px 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-@media (max-width: 700px){ /*PENDENTE RESPONSIVO IPAD*/
+    #container-photo, #opacity{
+        border-radius: 0px 0px 0px 0px;
+    }
+
     #container-information h1{
         font-size: 2.0rem;
         width: 14ch;
     }
 
-    #container {         
-        grid-template-columns: 1fr ;        
+    #container-information p{
+        margin-bottom: 3rem;
     }
    
+    #container-statistics{
+        gap: 4.38rem;
+    }
 }
 
+@media (max-width: 800px){ 
+    #container {         
+        grid-template-columns: 1fr;
+    }
+}
+
+/*mobile responsive*/
 @media (max-width: 400px){
     body{
-        overflow-x: hidden;       
+        overflow-x: hidden;
     }
 
     #container { 
-        max-width: 25rem;        
-        grid-template-columns: 1fr ;
-        /* padding: 10px 0px ; */
-        margin: 5rem auto;        
+        max-width: 25rem;
+        grid-template-columns: 1fr;
+        margin: 5rem auto;
     }
 
     #container-information {
@@ -136,15 +153,14 @@ font-family: 'Lexend Deca', sans-serif; */
 
     #container-information h1{
         font-size: 2.0rem;
-        width: 14ch;        
+        width: 14ch;
     }
     
     #container-information p{
         font-size: 1rem;
         margin-bottom: 3.12rem;
         line-height: 1.4rem;
-    }
-    
+    }   
 
     #container-statistics{
         flex-direction: column;
@@ -168,5 +184,4 @@ font-family: 'Lexend Deca', sans-serif; */
         border-radius: 10px 10px 0px 0px;
         object-fit: cover;
     }
-
 }
